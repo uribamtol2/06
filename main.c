@@ -1,15 +1,16 @@
 #include <stdio.h>
 
-int main(void)
+void func(void)
 {
-    int i;
+   int x; 
+   printf("func x is at %p\n", &x); 
+}
 
-    for(i=0;i<10; i++)
-      printf("*");
-    for(i=0;i<10; i++) 
-      printf("*");
-    for(i=0;i<10; i++) 
-      printf("*");
+int main(void)
+{ 
+    int x; 
+    printf("main x is at %p\n", &x); 
+    func(); 
 
-      return 0;
+    return 0;
 }
